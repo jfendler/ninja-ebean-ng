@@ -12,7 +12,7 @@
 	<groupId>com.jensfendler</groupId>
 	<artifactId>ninja-ebean-ng</artifactId>
 	<packaging>pom</packaging>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<url>http://www.jensfendler.com/</url>
 
 	<parent>
