@@ -6,7 +6,6 @@
          web\/framework   \/                  \/
 
 
-
 EBean "NG" (post-7.2.3) support for Ninja
 =========================================
 EBean is a simple and powerful ORM tool. This plugin allows you to use EBean in any Ninja application.
@@ -43,7 +42,7 @@ Setup
 
 1) Add your db conf to your application.conf file. For a simple H2 database:
 
-    ebean.datasource.databaseUrl=jdbc:h2:testdatabase:tests;DB_CLOSE_DELAY=-1;AUTO_SERVER=TRUE
+    ebean.datasource.databaseUrl=jdbc:h2:./testdatabase:tests;DB_CLOSE_DELAY=-1;AUTO_SERVER=TRUE
 
 For a MySQL database (you'll also need to add the MySQL driver dependency to
 your project)
@@ -94,8 +93,7 @@ both class names as well as packages (just make sure it ends with .*)
 4) Install the module in your conf.Module:
 
     protected void configure() {
-
-        // This installs the NinjaModule and handles the lifecycle
+        // This installs the NinjaEbeanNGModule and handles the lifecycle
         install(new NinjaEbeanNGModule());
     }
 
@@ -104,5 +102,4 @@ And that's it already :)
 
 Thanks
 ------
-Many thanks go to the original authors of the ninja-ebean module, in particular Raphael Bauer and Joe Lauer, for virtually all
-the code in this module. Although I hope to maintain and improve this module over time, it would not exist without them. 
+Many thanks go to the original authors of the ninja-ebean module, in particular [Raphael Bauer](https://github.com/raphaelbauer) and [Joe Lauer](https://github.com/jjlauer), for virtually all the code in this module. Although I hope to maintain and improve this module over time, it would not exist without them. 
