@@ -66,7 +66,7 @@ both class names as well as packages (just make sure it ends with .*)
     <dependency>
         <groupId>com.jensfendler</groupId>
         <artifactId>ninja-ebean-ng-module</artifactId>
-        <version>0.0.2</version>
+        <version>0.0.1</version>
     </dependency>
 
 3) Add ebean's enhancer plugin to your pom.xml:
