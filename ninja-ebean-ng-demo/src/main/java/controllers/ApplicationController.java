@@ -49,7 +49,7 @@ public class ApplicationController {
 	 * Handle a request for the index page, listing all existing guestbook
 	 * entries.
 	 * 
-	 * @return
+	 * @return the index page {@link Result}
 	 */
 	public Result index() {
 		// Get all guestbookentries now:
@@ -68,8 +68,10 @@ public class ApplicationController {
 	 * Handle a post request to store a new guest book entry in the database.
 	 * 
 	 * @param email
+	 *            the email for the new entry
 	 * @param content
-	 * @return
+	 *            the content for the new entry
+	 * @return a redirect {@link Result}
 	 */
 	public Result post(@Param("email") String email, @Param("content") String content, Context context) {
 		if (guestbookDao.createEntry(email, content) == null) {

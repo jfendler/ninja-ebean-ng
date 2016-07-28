@@ -52,14 +52,14 @@ public class GuestBookEntry {
 	}
 
 	/**
-	 * @return
+	 * @return the ID
 	 */
 	public Integer getId() {
 		return id;
 	}
 
 	/**
-	 * @return
+	 * @return the E-Mail address
 	 */
 	public String getEmail() {
 		return email;
@@ -67,13 +67,14 @@ public class GuestBookEntry {
 
 	/**
 	 * @param email
+	 *            the e-mail to set
 	 */
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
 	/**
-	 * @return
+	 * @return the content
 	 */
 	public String getContent() {
 		return content;
@@ -81,6 +82,7 @@ public class GuestBookEntry {
 
 	/**
 	 * @param content
+	 *            the content to set
 	 */
 	public void setContent(String content) {
 		this.content = content;

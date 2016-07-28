@@ -29,7 +29,7 @@ import models.GuestBookEntry;
 /**
  * Guestbook DAO to handle ORM access.
  * 
- * @author Jens Fendler <jf@jensfendler.com>
+ * @author Jens Fendler
  *
  */
 @Singleton
@@ -44,8 +44,10 @@ public class GuestbookDao {
 	 * Create a new {@link GuestBookEntry} and persist it to the DB via EBean
 	 * 
 	 * @param email
+	 *            the email of the entry
 	 * @param content
-	 * @return
+	 *            the content of the entry
+	 * @return the persisted {@link GuestBookEntry}, or null on error
 	 */
 	public GuestBookEntry createEntry(String email, String content) {
 		GuestBookEntry entry = new GuestBookEntry(email, content);
@@ -61,7 +63,7 @@ public class GuestbookDao {
 	/**
 	 * Return a list of all {@link GuestBookEntry}s from the database
 	 * 
-	 * @return
+	 * @return a {@link List} of all {@link GuestBookEntry}s from the database
 	 */
 	public List<GuestBookEntry> getAllEntries() {
 		return ebeanServer.find(GuestBookEntry.class).findList();
